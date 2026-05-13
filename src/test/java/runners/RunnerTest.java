@@ -9,7 +9,7 @@ public class RunnerTest {
         System.setProperty("karate.output.dir", "reports/");
 
         return Karate.run("classpath:features/TestApi.feature")
-                .tags("@TestPedidoPizza");
+                .tags("@TestUsuario");
     }
 
 }

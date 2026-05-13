@@ -49,13 +49,13 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
     <div>Scenarios</div>
   </div>
   <div id="nav-date">
-    <div>2026-05-13 12:04:57 p. m.</div>
+    <div>2026-05-13 01:26:22 p. m.</div>
   </div>
 </div>
 
         <div class="nav-container">
           <div class="nav-item passed">
-            <a href="#[2:16]"><span>[2:16]</span> <span>Pedido de pizza</span></a>
+            <a href="#[1:7]"><span>[1:7]</span> <span>Creacion de usuario y password en api</span></a>
           </div>
         </div>
       </div>
@@ -69,29 +69,29 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
           <span class="feature-description"></span>
         </div>
         <div class="scenario">
-          <div class="scenario-heading" id="[2:16]">
+          <div class="scenario-heading" id="[1:7]">
             <div class="heading-container">
               <div class="scenario-tags">
-                <a class="badge badge-primary" href="karate-tags.html">TestPedidoPizza</a>
+                <a class="badge badge-primary" href="karate-tags.html">TestUsuario</a>
               </div>
               <div class="scenario-keyword">
-                Scenario: <span>[2:16]</span>
-                <span class="scenario-name">Pedido de pizza</span>
+                Scenario: <span>[1:7]</span>
+                <span class="scenario-name">Creacion de usuario y password en api</span>
                 <span></span>
               </div>
             </div>
             <div class="scenario-time passed">
-              <span>ms:</span>&nbsp;<span>1588</span>
+              <span>ms:</span>&nbsp;<span>1834</span>
             </div>
           </div>
           <div class="step-row">
-            <div class="step-container" id="[2:16]bg">
+            <div class="step-container" id="[1:7]bg">
               <div class="step-ref bg-step">&gt;&gt;</div>
               <div class="step-cell passed">Background:</div>
             </div>
             <div class="time-cell passed"></div>
           </div>
-          <div data-parent="[2:16]bg"><div>
+          <div data-parent="[1:7]bg"><div>
   
 
   
@@ -104,7 +104,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
         <span>*</span>&nbsp;<span>configure ssl = true</span>
       </div>
     </div>
-    <div class="time-cell passed">340</div>
+    <div class="time-cell passed">379</div>
   </div>
 
    
@@ -119,7 +119,7 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
 </div>
 </div>
-          <div data-parent="[2:16]bg"><div>
+          <div data-parent="[1:7]bg"><div>
   
 
   
@@ -153,14 +153,49 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.17">
-      <div class="step-ref passed">17</div>
+    <div class="step-container" id="0.8">
+      <div class="step-ref passed">8</div>
       
       <div class="step-cell passed">
-        <span>Given</span>&nbsp;<span>url &#39;https://quickpizza.grafana.com/api/pizza&#39;</span>
+        <span>*</span>&nbsp;<span>def users = read(&#39;classpath:data/usuarios.json&#39;)</span>
       </div>
     </div>
-    <div class="time-cell passed">2</div>
+    <div class="time-cell passed">72</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  <div class="step-row">
+    <div class="step-container">
+      <div class="step-ref passed"></div>
+      
+      <div class="step-cell comment">#se esta seleccionando el primer usuario</div>
+    </div>
+    <div class="time-cell comment"></div>            
+  </div>
+
+  <div class="step-row">
+    <div class="step-container" id="0.10">
+      <div class="step-ref passed">10</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def usuario = users[0]</span>
+      </div>
+    </div>
+    <div class="time-cell passed">4</div>
   </div>
 
    
@@ -181,8 +216,36 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.18">
-      <div class="step-ref passed">18</div>
+    <div class="step-container" id="0.11">
+      <div class="step-ref passed">11</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url baseUrlAuth + &#39;/login&#39;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">10</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.12">
+      <div class="step-ref passed">12</div>
       
       <div class="step-cell passed">
         <span>And</span>&nbsp;<span>header Content-Type = &#39;application/json; charset=UTF-8&#39;</span>
@@ -209,14 +272,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.19">
-      <div class="step-ref passed">19</div>
+    <div class="step-container" id="0.13">
+      <div class="step-ref passed">13</div>
       
       <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>header Authorization = &#39;Token &#39; + token</span>
+        <span>And</span>&nbsp;<span>request { username: &#39;#(usuario.username)&#39;, password: &#39;#(usuario.password)&#39; }</span>
       </div>
     </div>
-    <div class="time-cell passed">14</div>
+    <div class="time-cell passed">4</div>
   </div>
 
    
@@ -237,42 +300,14 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.20">
-      <div class="step-ref passed">20</div>
-      
-      <div class="step-cell passed">
-        <span>And</span>&nbsp;<span>request {maxCaloriesPerSlice: 1000 , mustBeVegetarian:false }</span>
-      </div>
-    </div>
-    <div class="time-cell passed">49</div>
-  </div>
-
-   
-  
-  
-
-  
-
-     
-
-  
-
-</div>
-</div>
-          <div><div>
-  
-
-  
-
-  <div class="step-row">
-    <div class="step-container" id="0.21">
-      <div class="step-ref passed">21</div>
+    <div class="step-container" id="0.14">
+      <div class="step-ref passed">14</div>
       
       <div class="step-cell passed">
         <span>When</span>&nbsp;<span>method post</span>
       </div>
     </div>
-    <div class="time-cell passed">1180</div>
+    <div class="time-cell passed">1345</div>
   </div>
 
    
@@ -281,28 +316,34 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
 
   
 
-  <div class="preformatted" data-parent="0.21">12:04:56.248 request:
-1 &gt; POST https://quickpizza.grafana.com/api/pizza
+  <div class="preformatted" data-parent="0.14">13:26:20.948 request:
+1 &gt; POST https://fakestoreapi.com/auth/login
 1 &gt; Content-Type: application/json; charset=UTF-8
-1 &gt; Authorization: Token tXlztPtLdc71gJLN
-1 &gt; Content-Length: 53
-1 &gt; Host: quickpizza.grafana.com
+1 &gt; Content-Length: 41
+1 &gt; Host: fakestoreapi.com
 1 &gt; Connection: Keep-Alive
 1 &gt; User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.16)
 1 &gt; Accept-Encoding: gzip,deflate
-{&quot;maxCaloriesPerSlice&quot;:1000,&quot;mustBeVegetarian&quot;:false}
+{&quot;username&quot;:&quot;donero&quot;,&quot;password&quot;:&quot;ewedon&quot;}
 
-12:04:57.252 response time in milliseconds: 992
-1 &lt; 200
-1 &lt; Date: Wed, 13 May 2026 16:04:57 GMT
-1 &lt; Content-Type: application/json
-1 &lt; Content-Length: 609
+13:26:21.989 response time in milliseconds: 1034
+1 &lt; 201
+1 &lt; Date: Wed, 13 May 2026 17:26:21 GMT
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Content-Length: 149
 1 &lt; Connection: keep-alive
-1 &lt; Set-Cookie: AWSALB=rgpRJXp6xtWd3r/3SR2Tp0xTjzu9GyD1toYfx7uxWRHY4mK+WA4vib2yM0nGfPoUs5MAayvsboEn03wOty1PbihEbDr++vBSxDeCgLdYNoNlSjFeV/XLOrIgiYlq; Expires=Wed, 20 May 2026 16:04:57 GMT; Path=/
-1 &lt; Set-Cookie: AWSALBCORS=rgpRJXp6xtWd3r/3SR2Tp0xTjzu9GyD1toYfx7uxWRHY4mK+WA4vib2yM0nGfPoUs5MAayvsboEn03wOty1PbihEbDr++vBSxDeCgLdYNoNlSjFeV/XLOrIgiYlq; Expires=Wed, 20 May 2026 16:04:57 GMT; Path=/; SameSite=None; Secure
-1 &lt; Vary: Origin
-{&quot;pizza&quot;:{&quot;id&quot;:172076,&quot;name&quot;:&quot;A Soft Funghi&quot;,&quot;dough&quot;:{&quot;ID&quot;:3,&quot;name&quot;:&quot;Stuffed&quot;,&quot;caloriesPerSlice&quot;:300},&quot;ingredients&quot;:[{&quot;ID&quot;:14,&quot;name&quot;:&quot;Extra cheese&quot;,&quot;caloriesPerSlice&quot;:100,&quot;vegetarian&quot;:true},{&quot;ID&quot;:35,&quot;name&quot;:&quot;Asparagus&quot;,&quot;caloriesPerSlice&quot;:50,&quot;vegetarian&quot;:true},{&quot;ID&quot;:1,&quot;name&quot;:&quot;Extra virgin olive oil&quot;,&quot;caloriesPerSlice&quot;:50,&quot;vegetarian&quot;:true},{&quot;ID&quot;:5,&quot;name&quot;:&quot;Roma tomatoes&quot;,&quot;caloriesPerSlice&quot;:50,&quot;vegetarian&quot;:true},{&quot;ID&quot;:6,&quot;name&quot;:&quot;Mozzarella&quot;,&quot;caloriesPerSlice&quot;:100,&quot;vegetarian&quot;:true},{&quot;ID&quot;:16,&quot;name&quot;:&quot;Green peppers&quot;,&quot;caloriesPerSlice&quot;:50,&quot;vegetarian&quot;:true}],&quot;tool&quot;:&quot;Scissors&quot;},&quot;calories&quot;:400,&quot;vegetarian&quot;:true}
-
+1 &lt; access-control-allow-origin: *
+1 &lt; etag: W/&quot;95-bPbsuCAqUzUt1Ac3rPY8It95qK0&quot;
+1 &lt; x-powered-by: Express
+1 &lt; cf-cache-status: DYNAMIC
+1 &lt; Nel: {&quot;report_to&quot;:&quot;cf-nel&quot;,&quot;success_fraction&quot;:0.0,&quot;max_age&quot;:604800}
+1 &lt; Server-Timing: cfCacheStatus;desc=&quot;DYNAMIC&quot;
+1 &lt; Server-Timing: cfEdge;dur=8,cfOrigin;dur=228
+1 &lt; Report-To: {&quot;group&quot;:&quot;cf-nel&quot;,&quot;max_age&quot;:604800,&quot;endpoints&quot;:[{&quot;url&quot;:&quot;https://a.nel.cloudflare.com/report/v4?s=gSjqJoYgFHXaK47jMzaSmnc96lF%2BBWAh9KdrxwsOdX7Xl4jDXfcCGpCQN23zn9VkCou5Sk1uTJCSdFcvJZXCwPk7jl%2FqLx7hcI3FBmXcKbYDo6xgFlkP0E7jWmvdL6BbAPHY&quot;}]}
+1 &lt; Server: cloudflare
+1 &lt; CF-RAY: 9fb35e21f9d37440-MIA
+1 &lt; alt-svc: h3=&quot;:443&quot;; ma=86400
+{&quot;token&quot;:&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOjQsInVzZXIiOiJkb25lcm8iLCJpYXQiOjE3Nzg2OTMxODF9.AhDtUGeVB-iD9yQwfoCKbFONVYmjJcsz98lz5glohkk&quot;}
 
 </div>   
 
@@ -316,14 +357,42 @@ posthog.init('phc_M6fKk3dSX9HjglkqPSybauGas45NINb7EgsPGU8N9g1',{
   
 
   <div class="step-row">
-    <div class="step-container" id="0.22">
-      <div class="step-ref passed">22</div>
+    <div class="step-container" id="0.15">
+      <div class="step-ref passed">15</div>
       
       <div class="step-cell passed">
-        <span>Then</span>&nbsp;<span>status 200</span>
+        <span>Then</span>&nbsp;<span>status 201</span>
       </div>
     </div>
     <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.16">
+      <div class="step-ref passed">16</div>
+      
+      <div class="step-cell passed">
+        <span>And</span>&nbsp;<span>match response contains { token: &#39;#string&#39; }</span>
+      </div>
+    </div>
+    <div class="time-cell passed">19</div>
   </div>
 
    

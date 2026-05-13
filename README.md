@@ -36,6 +36,12 @@ Este proyecto implementa automatización de pruebas sobre api´s de uso QA.
 - **src/test/resources/features/**  
   Aquí se encuentran los archivos `.feature` que describen los escenarios de prueba en lenguaje BDD (Gherkin) para Karate.
 
+- **src/test/resources/data/**  
+  Aquí se encuentra el archivo `usuarios.json` donde se almacenan los usuarios, que se utilizan para su registro en `fakestoreapi.com/auth/login`.
+
+- **src/test/resources/**  
+  Aquí se encuentra el archivo `karate-config.json` donde se ubicados las api´s de prueba.
+
 ---
 ## Ejecuciones de test
 1. Para las ejecuciones se agrego una clase 'RunnerTest', donde se ejecutara por @Tag asignados por escenario en el feature.

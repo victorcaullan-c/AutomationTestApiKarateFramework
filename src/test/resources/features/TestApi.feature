@@ -5,16 +5,19 @@ Feature: Test to api
 
 @TestUsuario
   Scenario: Creacion de usuario y password en api
-    Given url 'https://fakestoreapi.com/auth/login'
+    * def users = read('classpath:data/usuarios.json')
+    #se esta seleccionando el primer usuario
+    * def usuario = users[0]
+    Given url baseUrlAuth + '/login'
     And header Content-Type = 'application/json; charset=UTF-8'
-    And request {username : 'donero', password:'ewedon' }
+    And request { username: '#(usuario.username)', password: '#(usuario.password)' }
     When method post
     Then status 201
     And match response contains { token: '#string' }
 
 @TestPedidoPizza
   Scenario: Pedido de pizza
-    Given url 'https://quickpizza.grafana.com/api/pizza'
+    Given url baseUrlquickPizza
     And header Content-Type = 'application/json; charset=UTF-8'
     And header Authorization = 'Token ' + token
     And request {maxCaloriesPerSlice: 1000 , mustBeVegetarian:false }
@@ -23,7 +26,7 @@ Feature: Test to api
 
   @TestEjemploGet
   Scenario: Ejemplo test Get
-    Given url 'https://jsonplaceholder.typicode.com/posts'
+    Given url  baseUrlMethodGet
     And header Content-Type = 'application/json; charset=UTF-8'
     When method get
     Then status 200
