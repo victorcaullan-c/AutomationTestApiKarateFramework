@@ -7,11 +7,44 @@ Este proyecto implementa automatización de pruebas sobre api´s de uso QA.
 ## Tecnologías Utilizadas
 
 - **Java 17**
-- **Maven**
-- **Karete Framework** 
+- **Maven 3.9.9**
 
+
+## Dependencias
+
+| Grupo              | Artefacto         | Versión | Alcance |
+|--------------------|-------------------|---------|---------|
+| com.intuit.karate  | karate-junit5     | 1.4.1   | test    |
+
+
+
+## Plugins de compilación
+
+| Plugin                 | Versión  |
+|------------------------|----------|
+| maven-surefire-plugin  | 3.2.5    |
+
+---
+## Descripción de carpetas
+
+- **reports/**  
+  Carpeta destinada a almacenar los reportes generados tras la ejecución de las pruebas automatizadas.
+
+- **src/test/java/runners/**  
+  Ubicación donde se definio la clase Runner, responsable de ejecutar los archivos de pruebas (`.feature`) utilizando el framework Karate y JUnit5.
+
+- **src/test/resources/features/**  
+  Aquí se encuentran los archivos `.feature` que describen los escenarios de prueba en lenguaje BDD (Gherkin) para Karate.
+
+---
 ## Ejecuciones de test
 1. Para las ejecuciones se agrego una clase 'RunnerTest', donde se ejecutara por @Tag asignados por escenario en el feature.
 
 ## Reporte Karate Framework
-1. La generacion de reportes de Karate Framework, se ubica en la ruta 'target/karete-reports'.
+1. La generacion de reportes de Karate Framework, se ubica en la ruta 'reports/karate-reports', definido al realizar la ejecucion desde el 'RunnerTest'.
+
+
+## Detalles adicionales
+
+- Codificación: UTF-8
+- Compilación: Java 17
